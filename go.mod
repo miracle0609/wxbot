@@ -1,4 +1,4 @@
-module github.com/yqchilde/wxbot
+module github.com/miracle0609/wxbot
 
 go 1.19
 
