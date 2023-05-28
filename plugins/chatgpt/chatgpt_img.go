@@ -4,9 +4,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/utils"
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/utils"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 // 设置图片相关指令

@@ -8,9 +8,9 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/sqlite"
-	"github.com/yqchilde/wxbot/engine/pkg/utils"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/sqlite"
+	"github.com/miracle0609/wxbot/engine/pkg/utils"
 )
 
 type Manager struct {

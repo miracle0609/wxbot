@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/plugins/localimage"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/plugins/localimage"
 )
 
 const (

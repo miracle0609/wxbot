@@ -4,14 +4,14 @@ import (
 	"time"
 
 	"github.com/spf13/viper"
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/net"
-	"github.com/yqchilde/wxbot/engine/robot"
-	"github.com/yqchilde/wxbot/framework/qianxun"
-	"github.com/yqchilde/wxbot/framework/vlw"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/net"
+	"github.com/miracle0609/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/framework/qianxun"
+	"github.com/miracle0609/wxbot/framework/vlw"
 
 	// 导入插件, 变更插件请查看README
-	_ "github.com/yqchilde/wxbot/engine/plugins"
+	_ "github.com/miracle0609/wxbot/engine/plugins"
 )
 
 func main() {

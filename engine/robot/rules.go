@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
 )
 
 // PrefixRule 检查消息前缀

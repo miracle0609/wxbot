@@ -7,7 +7,7 @@ import (
 
 	"github.com/signintech/gopdf"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
 )
 
 var (

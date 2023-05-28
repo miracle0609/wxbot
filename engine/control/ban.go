@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
 )
 
 var banCache = make(map[string]struct{})

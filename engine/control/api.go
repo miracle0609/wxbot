@@ -1,6 +1,6 @@
 package control
 
-import "github.com/yqchilde/wxbot/engine/robot"
+import "github.com/miracle0609/wxbot/engine/robot"
 
 type controlApi struct{}
 

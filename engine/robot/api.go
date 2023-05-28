@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/yqchilde/wxbot/engine/pkg/cryptor"
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/utils"
+	"github.com/miracle0609/wxbot/engine/pkg/cryptor"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/utils"
 )
 
 // IFramework 这是接入框架所定义的接口

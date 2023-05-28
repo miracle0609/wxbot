@@ -7,7 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
 )
 
 type embedFileSystem struct {

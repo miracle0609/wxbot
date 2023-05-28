@@ -1,8 +1,8 @@
 package manager
 
 import (
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/sqlite"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/sqlite"
 )
 
 var db sqlite.DB

@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"io"
 
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 func (manager *Manager) initBase() error {

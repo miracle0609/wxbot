@@ -7,7 +7,7 @@ import (
 
 	"github.com/sashabaranov/go-openai"
 
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 // 设置单次提问指令

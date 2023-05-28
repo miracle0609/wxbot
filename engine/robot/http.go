@@ -7,11 +7,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/yqchilde/wxbot/engine/pkg/cryptor"
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/net"
-	"github.com/yqchilde/wxbot/engine/pkg/static"
-	"github.com/yqchilde/wxbot/web"
+	"github.com/miracle0609/wxbot/engine/pkg/cryptor"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/net"
+	"github.com/miracle0609/wxbot/engine/pkg/static"
+	"github.com/miracle0609/wxbot/web"
 )
 
 // 跨域 middleware

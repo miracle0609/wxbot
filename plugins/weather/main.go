@@ -7,10 +7,10 @@ import (
 	"github.com/imroc/req/v3"
 	"github.com/tidwall/gjson"
 
-	"github.com/yqchilde/wxbot/engine/control"
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/sqlite"
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/control"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/sqlite"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 var (

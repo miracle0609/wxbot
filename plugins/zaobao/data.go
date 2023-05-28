@@ -6,7 +6,7 @@ import (
 
 	"github.com/imroc/req/v3"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
 )
 
 type zaoBaoResp struct {

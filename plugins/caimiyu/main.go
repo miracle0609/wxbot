@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"github.com/imroc/req/v3"
 
-	"github.com/yqchilde/wxbot/engine/control"
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/control"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 func init() {
@@ -27,7 +27,7 @@ func init() {
 			if data == nil {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
-				ctx.ReplyText(fmt.Sprintf("🔎 题目:(60秒之后自动给出答案）\n %s", (data.Result.riddle).String()+","(data.Result.type).String())
+				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", (data.Result.riddle).String()+","+(data.Result.type).String()))
 				timeLimit := time.After(60 * time.Second)
 				for {
 					select {

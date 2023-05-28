@@ -3,8 +3,8 @@ package batchSend
 import (
 	"time"
 
-	"github.com/yqchilde/wxbot/engine/control"
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/control"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 func init() {

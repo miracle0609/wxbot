@@ -53,7 +53,7 @@
 * [x] [千寻框架](https://gitee.com/qxvxhook/pc-vx-hook-http-api/tree/36018/%E5%8D%83%E5%AF%BB%E6%A1%86%E6%9E%B6) | [👉对接说明文档👀](docs/qianxun.md)
     * 具体配置查看 `config.yaml` 文件注释说明
     * ![img](docs/qianxun.png)
-* [x] [VLW框架](https://github.com/yqchilde/wxbot)
+* [x] [VLW框架](https://github.com/miracle0609/wxbot)
     * 具体配置查看 `config.yaml` 文件注释说明
     * ![img](docs/vlw.png)
 
@@ -211,41 +211,41 @@ type IFramework interface {
 <summary>🎁 已有插件 👇</summary>
 
 * [x] [百度百科-点击查看使用说明](plugins/baidubaike)
-    * `import _ "github.com/yqchilde/wxbot/plugins/baidubaike"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/baidubaike"`
 * [x] [ChatGPT聊天-点击查看使用说明](plugins/chatgpt)
-    * `import _ "github.com/yqchilde/wxbot/plugins/chatgpt"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/chatgpt"`
 * [x] [KFC疯狂星期四骚话-点击查看使用说明](plugins/crazykfc)
-    * `import _ "github.com/yqchilde/wxbot/plugins/crazykfc"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/crazykfc"`
 * [x] [获取表情原图-点击查看使用说明](plugins/memepicture)
-    * `import _ "github.com/yqchilde/wxbot/plugins/memepicture"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/memepicture"`
 * [x] [摸鱼办-点击查看使用说明](plugins/moyuban)
-    * `import _ "github.com/yqchilde/wxbot/plugins/moyuban"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/moyuban"`
 * [x] [查拼音缩写-点击查看使用说明](plugins/pinyinsuoxie)
-    * `import _ "github.com/yqchilde/wxbot/plugins/pinyinsuoxie"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/pinyinsuoxie"`
 * [x] [获取美女图片-点击查看使用说明](plugins/plmm)
-    * `import _ "github.com/yqchilde/wxbot/plugins/plmm"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/plmm"`
 * [x] [查天气-点击查看使用说明](plugins/weather)
-    * `import _ "github.com/yqchilde/wxbot/plugins/weather"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/weather"`
 * [x] [获取每日早报-点击查看使用说明](plugins/zaobao)
-    * `import _ "github.com/yqchilde/wxbot/plugins/zaobao"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/zaobao"`
 * [x] [管理相关-点击查看使用说明](plugins/manager)
-    * `import _ "github.com/yqchilde/wxbot/plugins/manager"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/manager"`
 * [x] [公众号监控转发-点击查看使用说明](plugins/ghmonitor)
-    * `import _ "github.com/yqchilde/wxbot/plugins/ghmonitor"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/ghmonitor"`
 * [x] [聊天热词云-点击查看使用说明](plugins/ghmonitor)
-    * `import _ "github.com/yqchilde/wxbot/plugins/wordcloud"`
+    * `import _ "github.com/miracle0609/wxbot/plugins/wordcloud"`
 * [x] [查ID-点击查看使用说明](plugins/chaid)
-  * `import _ "github.com/yqchilde/wxbot/plugins/chaid"`
+  * `import _ "github.com/miracle0609/wxbot/plugins/chaid"`
 * [x] [有道翻译-点击查看使用说明](plugins/youdaofanyi)
-  * `import _ "github.com/yqchilde/wxbot/plugins/youdaofanyi"`
+  * `import _ "github.com/miracle0609/wxbot/plugins/youdaofanyi"`
 * [x] [自动通过好友添加请求-点击查看使用说明](plugins/friendadd)
-  * `import _ "github.com/yqchilde/wxbot/plugins/friendadd"`
+  * `import _ "github.com/miracle0609/wxbot/plugins/friendadd"`
 * [x] [选择困难症帮手-点击查看使用说明](plugins/choose)
-  * `import _ "github.com/yqchilde/wxbot/plugins/choose"`
+  * `import _ "github.com/miracle0609/wxbot/plugins/choose"`
 * [x] [读取本地图片-点击查看使用说明](plugins/localimage)
-  * `import _ "github.com/yqchilde/wxbot/plugins/localimage"`
+  * `import _ "github.com/miracle0609/wxbot/plugins/localimage"`
 * [x] [爬取图片到本地-点击查看使用说明](plugins/localimagespider)
-  * `import _ "github.com/yqchilde/wxbot/plugins/localimagespider"`
+  * `import _ "github.com/miracle0609/wxbot/plugins/localimagespider"`
 * [x] [猜谜语](plugins/caimiyu)
   * `import _ "github.com/miracle0609/wxbot/plugins/caimiyu"`
 </details>
@@ -261,7 +261,7 @@ type IFramework interface {
 1. 克隆代码
 
 ```bash
-git clone https://github.com/yqchilde/wxbot.git
+git clone https://github.com/miracle0609/wxbot.git
 ```
 
 2. 配置`config.yaml`
@@ -272,14 +272,14 @@ git clone https://github.com/yqchilde/wxbot.git
 
 ### Releases包
 
-1. 去[Releases](https://github.com/yqchilde/wxbot/releases)下载对应系统的编译包，解压后执行二进制文件即可
+1. 去[Releases](https://github.com/miracle0609/wxbot/releases)下载对应系统的编译包，解压后执行二进制文件即可
 
 ### Docker运行
 
 1. 方式一：一键脚本启动
 
 ```shell
-bash -c "$(curl -fsSL https://raw.fastgit.org/yqchilde/wxbot/hook/docker/run.sh)"
+bash -c "$(curl -fsSL https://raw.fastgit.org/miracle0609/wxbot/hook/docker/run.sh)"
 ```
 
 2. 方式二：命令启动，注意提前配置`config.yaml`,否则会报错
@@ -289,7 +289,7 @@ docker run -d \
   -p 9528:9528 \
   -v $(pwd)/config.yaml:/app/config.yaml \
   -v $(pwd)/data:/app/data \
-  yqchilde/wxbot:latest
+  miracle0609/wxbot:latest
 ```
 
 ### Actions编译
@@ -313,20 +313,20 @@ docker run -d \
 🔴修改完`plugins.yaml`后需要执行一次`make plugins`或`go generate -tags plugins ./engine/plugins`生成对应的`plugins.go`文件再去编译
 
 ```yaml
-- "github.com/yqchilde/wxbot/plugins/baidubaike"   # 百度百科
-- "github.com/yqchilde/wxbot/plugins/chatgpt"      # GPT聊天
-- "github.com/yqchilde/wxbot/plugins/crazykfc"     # 肯德基疯狂星期四骚话
-- "github.com/yqchilde/wxbot/plugins/ghmonitor"    # 公众号消息监控转发
-- "github.com/yqchilde/wxbot/plugins/manager"      # 群组管理相关
-- "github.com/yqchilde/wxbot/plugins/memepicture"  # 表情包原图
-- "github.com/yqchilde/wxbot/plugins/moyuban"      # 摸鱼办
-- "github.com/yqchilde/wxbot/plugins/pinyinsuoxie" # 拼音缩写翻译
-- "github.com/yqchilde/wxbot/plugins/plmm"         # 漂亮妹妹
-- "github.com/yqchilde/wxbot/plugins/weather"      # 天气查询
-- "github.com/yqchilde/wxbot/plugins/zaobao"       # 每日早报
-- "github.com/yqchilde/wxbot/plugins/wordcloud"    # 聊天热词
-- "github.com/yqchilde/wxbot/plugins/chaid"        # 查wxId
-- "github.com/yqchilde/wxbot/plugins/youdaofanyi"  # 有道翻译
+- "github.com/miracle0609/wxbot/plugins/baidubaike"   # 百度百科
+- "github.com/miracle0609/wxbot/plugins/chatgpt"      # GPT聊天
+- "github.com/miracle0609/wxbot/plugins/crazykfc"     # 肯德基疯狂星期四骚话
+- "github.com/miracle0609/wxbot/plugins/ghmonitor"    # 公众号消息监控转发
+- "github.com/miracle0609/wxbot/plugins/manager"      # 群组管理相关
+- "github.com/miracle0609/wxbot/plugins/memepicture"  # 表情包原图
+- "github.com/miracle0609/wxbot/plugins/moyuban"      # 摸鱼办
+- "github.com/miracle0609/wxbot/plugins/pinyinsuoxie" # 拼音缩写翻译
+- "github.com/miracle0609/wxbot/plugins/plmm"         # 漂亮妹妹
+- "github.com/miracle0609/wxbot/plugins/weather"      # 天气查询
+- "github.com/miracle0609/wxbot/plugins/zaobao"       # 每日早报
+- "github.com/miracle0609/wxbot/plugins/wordcloud"    # 聊天热词
+- "github.com/miracle0609/wxbot/plugins/chaid"        # 查wxId
+- "github.com/miracle0609/wxbot/plugins/youdaofanyi"  # 有道翻译
 - "github.com/miracle0609/wxbot/plugins/youdaofanyi"  # 猜谜语
 ```
 
@@ -354,10 +354,10 @@ import (
 
 	"github.com/PullRequestInc/go-gpt3"
 
-	"github.com/yqchilde/wxbot/engine/control"
-	"github.com/yqchilde/wxbot/engine/pkg/log"
-	"github.com/yqchilde/wxbot/engine/pkg/sqlite"
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/control"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/sqlite"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 ```
 
@@ -368,7 +368,7 @@ import (
 
 ## Feature
 
-开发计划：[🕒 开发计划](https://github.com/users/yqchilde/projects/2)  
+开发计划：[🕒 开发计划](https://github.com/users/miracle0609/projects/2)  
 如果您感觉这个项目有意思，麻烦帮我点一下star  
 这个项目待(不)补(完)充(善)很多东西，由于工作关系会抽出时间弄，感谢您发现并使用此仓库
 
@@ -380,9 +380,9 @@ import (
 
 ### JetBrains 开源证书支持
 
-`yqchilde/wxbot` 项目一直以来都是在 JetBrains 公司旗下的 GoLand 集成开发环境中进行开发，基于 **free JetBrains Open Source license(s)** 正版免费授权，在此表达我的谢意。
+`miracle0609/wxbot` 项目一直以来都是在 JetBrains 公司旗下的 GoLand 集成开发环境中进行开发，基于 **free JetBrains Open Source license(s)** 正版免费授权，在此表达我的谢意。
 
-<a href="https://www.jetbrains.com/?from=yqchilde/wxbot" target="_blank"><img src="https://raw.githubusercontent.com/panjf2000/illustrations/master/jetbrains/jetbrains-variant-4.png" width="200" align="middle"/></a>
+<a href="https://www.jetbrains.com/?from=miracle0609/wxbot" target="_blank"><img src="https://raw.githubusercontent.com/panjf2000/illustrations/master/jetbrains/jetbrains-variant-4.png" width="200" align="middle"/></a>
 
 ### 开源项目
 

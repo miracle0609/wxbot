@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-co-op/gocron"
 
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 var job = gocron.NewScheduler(time.Local)

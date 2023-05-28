@@ -3,7 +3,7 @@ package control
 import (
 	"errors"
 
-	"github.com/yqchilde/wxbot/engine/pkg/log"
+	"github.com/miracle0609/wxbot/engine/pkg/log"
 )
 
 // Control 插件控制器

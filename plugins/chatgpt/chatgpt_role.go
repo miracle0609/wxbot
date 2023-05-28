@@ -7,8 +7,8 @@ import (
 
 	"github.com/sashabaranov/go-openai"
 
-	"github.com/yqchilde/wxbot/engine/pkg/ordermap"
-	"github.com/yqchilde/wxbot/engine/robot"
+	"github.com/miracle0609/wxbot/engine/pkg/ordermap"
+	"github.com/miracle0609/wxbot/engine/robot"
 )
 
 var SystemRole = ordermap.NewOrderMap()
