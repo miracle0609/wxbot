@@ -58,14 +58,14 @@ func init() {
 }
 
 
-func getZiMi()(*apiResponse, error) {
+func getZiMi()(*ApiResponse, error) {
 	var resp ApiResponse
 	api := "https://api.qqsuu.cn/api/dm-caizimi"
 	if err := req.C().SetBaseURL(api).Get().Do().Into(&resp); err != nil {
 			return nil, err
 	}
 	if resp.Code != 200 {
-		return nil, err
+		return nil, nil
 	}
 	return &resp, nil
 }
