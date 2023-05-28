@@ -33,11 +33,9 @@ func init() {
 		defer cancel()
 		var data apiResponse
 		data = getZiMi()
-			if data == nil {
-				ctx.ReplyText("出错了，请稍后尝试")
-			} else {
-				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", data.Result.Riddle+","+data.Result.Type))
-				timeLimit := time.After(60 * time.Second)
+
+		ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", data.Result.Riddle+","+data.Result.Type))
+		timeLimit := time.After(60 * time.Second)
 				for {
 					select {
 					case <-timeLimit:
@@ -53,17 +51,16 @@ func init() {
 						return
 					}
 				}
-			}
 	})
 }
 
 
 func getZiMi()apiResponse {
     resp := req.C().Get("https://api.qqsuu.cn/api/dm-caizimi")
-	data := resp.result
+	data := resp.Result
     return apiResponse{
-        Code: resp.code,
-        Msg: resp.msg,
+        Code: resp.Code,
+        Msg: resp.Msg,
         Result: data,
 	}
 }
