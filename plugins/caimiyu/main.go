@@ -1,4 +1,4 @@
-package youdaofanyi
+package caimiyu
 
 import (
 	"fmt"
@@ -27,12 +27,12 @@ func init() {
 			if data == nil {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
-				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", (data.Result.riddle).String()+","+(data.Result.type).String()))
+				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", data.Result.riddle+","+data.Result.type))
 				timeLimit := time.After(60 * time.Second)
 				for {
 					select {
 					case <-timeLimit:
-						ctx.ReplyTextAndAt(fmt.Sprintf("🔎 时间到,正确答案是：\n %s", (data.Result.answer).String()))
+						ctx.ReplyTextAndAt(fmt.Sprintf("🔎 时间到,正确答案是：\n %s", data.Result.answer))
 						return
 					case ctx := <-recv:
 						userAnswer := ctx.MessageString()
@@ -40,7 +40,7 @@ func init() {
 							ctx.ReplyText("恭喜你，回答正确,猜谜结束")
 							return
 						}
-						ctx.ReplyTextAndAt(fmt.Sprintf("很遗憾，你回答错误"))
+						ctx.ReplyTextAndAt("很遗憾，你回答错误")
 						return
 					}
 				}
