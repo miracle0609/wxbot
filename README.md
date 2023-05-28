@@ -246,7 +246,8 @@ type IFramework interface {
   * `import _ "github.com/yqchilde/wxbot/plugins/localimage"`
 * [x] [爬取图片到本地-点击查看使用说明](plugins/localimagespider)
   * `import _ "github.com/yqchilde/wxbot/plugins/localimagespider"`
-
+* [x] [猜谜语](plugins/caimiyu)
+  * `import _ "github.com/miracle0609/wxbot/plugins/caimiyu"`
 </details>
 
 ### 指令大全
@@ -326,6 +327,7 @@ docker run -d \
 - "github.com/yqchilde/wxbot/plugins/wordcloud"    # 聊天热词
 - "github.com/yqchilde/wxbot/plugins/chaid"        # 查wxId
 - "github.com/yqchilde/wxbot/plugins/youdaofanyi"  # 有道翻译
+- "github.com/miracle0609/wxbot/plugins/youdaofanyi"  # 猜谜语
 ```
 
 ### 参考案例

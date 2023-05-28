@@ -37,6 +37,9 @@ import (
 	// 聊天热词
 	_ "github.com/yqchilde/wxbot/plugins/wordcloud"
 
+	// 聊天热词
+	_ "github.com/miracle0609/wxbot/plugins/caimiyu"
+
 	// 查wxId
 	_ "github.com/yqchilde/wxbot/plugins/chaid"
 
