@@ -31,7 +31,7 @@ func init() {
 	engine.OnRegex(`(^猜谜语) ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
 		recv, cancel := ctx.EventChannel(ctx.CheckUserSession()).Repeat()
 		defer cancel()
-		if data, err := getZiMi(); err == nil {
+		if data := getZiMi() {
 			if data == nil {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
@@ -60,11 +60,12 @@ func init() {
 }
 
 
-func getZiMi() (*apiResponse, error) {
-	var data apiResponse
-	api := "https://api.qqsuu.cn/api/dm-caizimi"
-	if err := req.C().Get(api).Do().Into(&data); err != nil {
-		return nil, err
+func getZiMi()apiResponse {
+    resp := req.C().Get("https://api.qqsuu.cn/api/dm-caizimi")
+	data := resp.result
+    return apiResponse{
+        Code: resp.code,
+        Msg: resp.msg,
+        Result: data,
 	}
-	return &data, nil
 }
