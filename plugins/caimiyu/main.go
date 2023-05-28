@@ -28,6 +28,7 @@ func init() {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
 				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", data.Result.riddle+","+data.Result.type))
+				
 				timeLimit := time.After(60 * time.Second)
 				for {
 					select {
