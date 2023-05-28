@@ -39,12 +39,10 @@ func init() {
 						if userAnswer == data.Result.answer {
 							ctx.ReplyText("恭喜你，回答正确,猜谜结束")
 							return
-						} else {
-							ctx.ReplyTextAndAt(fmt.Sprintf("很遗憾，你回答错误"))
-							return
 						}
+						ctx.ReplyTextAndAt(fmt.Sprintf("很遗憾，你回答错误"))
+						return
 					}
-					
 				}
 			}
 		} else {
