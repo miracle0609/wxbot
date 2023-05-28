@@ -31,7 +31,8 @@ func init() {
 	engine.OnRegex(`(^猜谜语) ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
 		recv, cancel := ctx.EventChannel(ctx.CheckUserSession()).Repeat()
 		defer cancel()
-		if data := getZiMi() {
+		var data apiResponse
+		data = getZiMi()
 			if data == nil {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
@@ -53,9 +54,6 @@ func init() {
 					}
 				}
 			}
-		} else {
-			ctx.ReplyText("查询失败，这一定不是bug🤔")
-		}
 	})
 }
 
