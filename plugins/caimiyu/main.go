@@ -12,12 +12,12 @@ import (
 type apiResponse struct {
 	Code   int    `json:"code"`
 	Msg    string `json:"msg"`
-	Result []struct {
-		Riddle         string `json:"riddle"`
+	Result struct {
+		Riddle       string `json:"riddle"`
 		Answer       string `json:"answer"`
-		Disturb    string `json:"disturb"`
-		Description    string `json:"description"`
-		Type       string `json:"type"`
+		Disturb      string `json:"disturb"`
+		Description  string `json:"description"`
+		Type         string `json:"type"`
 	} `json:"result"`
 }
 
