@@ -66,7 +66,7 @@ func getZiMi() (*apiResponse, error) {
 	if err := req.C().Get(api).Do().Into(&data); err != nil {
 		return nil, err
 	}
-	if len(data.Result) == 0 {
+	if len(data.Result.Riddle) == 0 {
 		return nil, nil
 	}
 	return &data, nil
