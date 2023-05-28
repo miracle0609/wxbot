@@ -3,13 +3,23 @@ package caimiyu
 import (
 	"fmt"
 	"time"
-	"net/url"
-	"strconv"
 	"github.com/imroc/req/v3"
 
 	"github.com/miracle0609/wxbot/engine/control"
 	"github.com/miracle0609/wxbot/engine/robot"
 )
+
+type apiResponse struct {
+	Code   int    `json:"code"`
+	Msg    string `json:"msg"`
+	Result []struct {
+		Riddle         string `json:"riddle"`
+		Answer       string `json:"answer"`
+		Disturb    string `json:"disturb"`
+		Description    string `json:"description"`
+		Type       string `json:"type"`
+	} `json:"result"`
+}
 
 func init() {
 	engine := control.Register("caimiyu", &control.Options{
@@ -19,11 +29,9 @@ func init() {
 	})
 
 	engine.OnRegex(`(^猜谜语) ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
-		word := ctx.State["regex_matched"].([]string)
-		userIssue := ctx.MessageString()
 		recv, cancel := ctx.EventChannel(ctx.CheckUserSession()).Repeat()
 		defer cancel()
-		if data, err := getZiMi(word); err == nil {
+		if data, err := getZiMi(); err == nil {
 			if data == nil {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
@@ -51,18 +59,8 @@ func init() {
 	})
 }
 
-type apiResponse struct {
-	Code   int    `json:"code"`
-	Msg    string `json:"msg"`
-	Result []struct {
-		Riddle         string `json:"riddle"`
-		Answer       string `json:"answer"`
-		Type       string `json:"type"`
-	} `json:"result"`
-	
-}
 
-func getZiMi(keyword string) (*apiResponse, error) {
+func getZiMi() (*apiResponse, error) {
 	var data apiResponse
 	api := "https://api.qqsuu.cn/api/dm-caizimi"
 	if err := req.C().Get(api).Do().Into(&data); err != nil {
