@@ -27,17 +27,16 @@ func init() {
 			if data == nil {
 				ctx.ReplyText("出错了，请稍后尝试")
 			} else {
-				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", data.Result.riddle+","+data.Result.type))
-				
+				ctx.ReplyText(fmt.Sprintf("🔎 题目:60秒之后自动给出答案\n %s", data.Result.Riddle+","+data.Result.Type))
 				timeLimit := time.After(60 * time.Second)
 				for {
 					select {
 					case <-timeLimit:
-						ctx.ReplyTextAndAt(fmt.Sprintf("🔎 时间到,正确答案是：\n %s", data.Result.answer))
+						ctx.ReplyTextAndAt(fmt.Sprintf("🔎 时间到,正确答案是：\n %s", data.Result.Answer))
 						return
 					case ctx := <-recv:
 						userAnswer := ctx.MessageString()
-						if userAnswer == data.Result.answer {
+						if userAnswer == data.Result.Answer {
 							ctx.ReplyText("恭喜你，回答正确,猜谜结束")
 							return
 						}
@@ -55,7 +54,12 @@ func init() {
 type apiResponse struct {
 	Code   int    `json:"code"`
 	Msg    string `json:"msg"`
-	Result string `json:"result"`
+	Result []struct {
+		Riddle         string `json:"riddle"`
+		Answer       string `json:"answer"`
+		Type       string `json:"type"`
+	} `json:"result"`
+	
 }
 
 func getZiMi(keyword string) (*apiResponse, error) {
