@@ -138,7 +138,7 @@ func init() {
 
 func getSong(keyword string)(*Result, error) {
 	var resp Result
-	api := "http://64.112.43.106:3000/search?keywords=" + url.QueryEscape(keyword) + "&limit=1"
+	api := "http://64.112.43.106:3000/search?keywords=" + url.QueryEscape(keyword)
 	if err := req.C().SetBaseURL(api).Post().Do().Into(&resp); err != nil {
 			fmt.Println(resp)
 			return nil, err
