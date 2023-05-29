@@ -94,7 +94,7 @@ func init() {
 				geurl += ".mp3"
 				fmt.Printf("歌曲连接 = %s\n", geurl)
 				for _, artist := range song.Artists {
-					ctx.ReplyMusic(song.Name, artist.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl, song.Album.Img1V1URL)
+					ctx.ReplyMusic(song.Name, artist.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl, song.Artist.Img1V1URL)
 					break
 				}
 				break
