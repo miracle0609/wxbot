@@ -113,8 +113,10 @@ func init() {
 				ctx.ReplyText("出错了，稍后尝试")
 			} else {
 				songurl := testx.Songs[0].ID
-				geurl := "https://music.163.com/song/media/outer/url?id=" + songurl +"id.mp3"
-				ctx.ReplyMusic(testx.Songs[0].Name, testx.Data.Artistsname, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl , testx.Songs[0].Album.PicUrl)
+				geurl := "https://music.163.com/song/media/outer/url?id="
+				geurl += songurl
+				gerul += ".mp3"
+				ctx.ReplyMusic(testx.Songs[0].Name, testx.Songs[0].Artists[0].Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl , testx.Songs[0].Album.PicUrl)
 				//ReplyMusic(name, author, app, jumpUrl, musicUrl, coverUrl string)
 			}
 		}
@@ -127,9 +129,6 @@ func getSong(keyword string)(*Result, error) {
 	api := "http://64.112.43.106:3000/search?keywords=" + keyword + "&limit=1"
 	if err := req.C().SetBaseURL(api).Get().Do().Into(&resp); err != nil {
 			return nil, err
-	}
-	if resp.Code != 1 {
-		return nil, nil
 	}
 	return &resp, nil
 }
