@@ -122,7 +122,10 @@ func init() {
 				geurl := "https://music.163.com/song/media/outer/url?id="
 				geurl += strconv.Itoa(songurl)
 				geurl += ".mp3"
-				ctx.ReplyMusic(song.Name, song.Artists.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl, song.Album.PicUrl)
+				 for _, artist := range song.Artists {
+					ctx.ReplyMusic(song.Name, artist.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl, song.Album.PicUrl)
+					break
+				}
 				break
 			}
 				//ReplyMusic(name, author, app, jumpUrl, musicUrl, coverUrl string)
