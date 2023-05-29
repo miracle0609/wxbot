@@ -40,6 +40,9 @@ import (
 	// 猜谜语
 	_ "github.com/miracle0609/wxbot/plugins/caimiyu"
 
+	// 点歌
+	_ "github.com/miracle0609/wxbot/plugins/diange"
+
 	// 网易云随机歌曲
 	_ "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"
 

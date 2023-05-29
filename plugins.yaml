@@ -10,6 +10,7 @@
 - "github.com/miracle0609/wxbot/plugins/zaobao"           # 每日早报
 - "github.com/miracle0609/wxbot/plugins/wordcloud"        # 聊天热词
 - "github.com/miracle0609/wxbot/plugins/caimiyu"       # 猜谜语
+- "github.com/miracle0609/wxbot/plugins/diange"       # 点歌
 - "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"       # 网易云随机歌曲
 - "github.com/miracle0609/wxbot/plugins/chaid"            # 查wxId
 - "github.com/miracle0609/wxbot/plugins/youdaofanyi"      # 有道翻译

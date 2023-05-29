@@ -18,7 +18,7 @@ type ApiResponse struct {
 }
 
 func init() {
-	engine := control.Register("caimiyu", &control.Options{
+	engine := control.Register("wangyiyunRandSong", &control.Options{
 		Alias: "网易云",
 		Help: "指令:\n" +
 			"* 网易云\n" ,

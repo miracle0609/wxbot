@@ -20,3 +20,4 @@
 * [爬取图片到本地](localimagespider)
 * [猜谜语](caimiyu)
 * [网易云随机歌曲](wangyiyunRandSong)
+* [网易云点歌](diange)
