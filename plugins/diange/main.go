@@ -122,7 +122,8 @@ func init() {
 				geurl := "https://music.163.com/song/media/outer/url?id="
 				geurl += strconv.Itoa(songurl)
 				geurl += ".mp3"
-				 for _, artist := range song.Artists {
+				fmt.Printf("歌曲连接 = %s\n", geurl)
+				for _, artist := range song.Artists {
 					ctx.ReplyMusic(song.Name, artist.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl, song.Album.PicUrl)
 					break
 				}
@@ -141,5 +142,6 @@ func getSong(keyword string)(*Result, error) {
 	if err := req.C().SetBaseURL(api).Get().Do().Into(&resp); err != nil {
 			return nil, err
 	}
+	fmt.Println(resp)
 	return &resp, nil
 }
