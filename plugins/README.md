@@ -19,3 +19,4 @@
 * [读取本地图片](localimage)
 * [爬取图片到本地](localimagespider)
 * [猜谜语](caimiyu)
+* [网易云随机歌曲](wangyiyunRandSong)

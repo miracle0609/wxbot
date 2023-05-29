@@ -246,8 +246,10 @@ type IFramework interface {
   * `import _ "github.com/miracle0609/wxbot/plugins/localimage"`
 * [x] [爬取图片到本地-点击查看使用说明](plugins/localimagespider)
   * `import _ "github.com/miracle0609/wxbot/plugins/localimagespider"`
-* [x] [猜谜语](plugins/caimiyu)
+* [x] [猜谜语-点击查看使用说明](plugins/caimiyu)
   * `import _ "github.com/miracle0609/wxbot/plugins/caimiyu"`
+* [x] [网易云随机歌曲-点击查看使用说明](plugins/wangyiyunRandSong)
+  * `import _ "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"`
 </details>
 
 ### 指令大全
@@ -327,7 +329,8 @@ docker run -d \
 - "github.com/miracle0609/wxbot/plugins/wordcloud"    # 聊天热词
 - "github.com/miracle0609/wxbot/plugins/chaid"        # 查wxId
 - "github.com/miracle0609/wxbot/plugins/youdaofanyi"  # 有道翻译
-- "github.com/miracle0609/wxbot/plugins/youdaofanyi"  # 猜谜语
+- "github.com/miracle0609/wxbot/plugins/caimiyu"  # 猜谜语
+- "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"  # 网易云随机歌曲
 ```
 
 ### 参考案例

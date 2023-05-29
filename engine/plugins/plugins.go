@@ -40,6 +40,9 @@ import (
 	// 猜谜语
 	_ "github.com/miracle0609/wxbot/plugins/caimiyu"
 
+	// 网易云随机歌曲
+	_ "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"
+
 	// 查wxId
 	_ "github.com/miracle0609/wxbot/plugins/chaid"
 
