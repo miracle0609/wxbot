@@ -116,11 +116,11 @@ func init() {
 			if testx == nil {
 				ctx.ReplyText("出错了，稍后尝试")
 			} else {
-				songurl := testx.Songs[0].ID
+				songurl := testx.Songs.ID
 				geurl := "https://music.163.com/song/media/outer/url?id="
 				geurl += strconv.Itoa(songurl)
 				geurl += ".mp3"
-				ctx.ReplyMusic(testx.Songs[0].Name, testx.Songs[0].Artists[0].Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl , testx.Songs[0].Album.PicUrl)
+				ctx.ReplyMusic(testx.Songs.Name, testx.Songs.Artists.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl , testx.Songs.Album.PicUrl)
 				//ReplyMusic(name, author, app, jumpUrl, musicUrl, coverUrl string)
 			}
 		}
