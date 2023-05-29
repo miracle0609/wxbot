@@ -1,8 +1,6 @@
 package wangyiyunRandSong
 
 import (
-	"fmt"
-	"time"
 	"github.com/imroc/req/v3"
 
 	"github.com/miracle0609/wxbot/engine/control"
@@ -31,7 +29,7 @@ func init() {
 			if testx == nil {
 				ctx.ReplyText("出错了，稍后尝试")
 			} else {
-				ctx.ReplyMusic(testx.Data.name, testx.Data.Artistsname, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", testx.Data.url, testx.Data.Picurl)
+				ctx.ReplyMusic(testx.Data.Name, testx.Data.Artistsname, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", testx.Data.Url, testx.Data.Picurl)
 				//ReplyMusic(name, author, app, jumpUrl, musicUrl, coverUrl string)
 			}
 		}
