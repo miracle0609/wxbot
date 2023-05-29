@@ -18,6 +18,7 @@ func init() {
 
 	engine.OnRegex(`^百度百科 ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
 		word := ctx.State["regex_matched"].([]string)[1]
+		fmt.Printf("查询内容 = %s\n", word)
 		if data, err := getBaiKe(word); err == nil {
 			if data == nil {
 				ctx.ReplyText("没查到该百科含义")

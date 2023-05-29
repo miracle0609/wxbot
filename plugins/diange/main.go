@@ -1,6 +1,7 @@
 package diange
 
 import (
+	"fmt"
 	"strconv"
 	"github.com/imroc/req/v3"
 
@@ -109,6 +110,7 @@ func init() {
 
 	engine.OnRegex(`^点歌 ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
 		word := ctx.State["regex_matched"].([]string)[1]
+		fmt.Printf("歌曲 = %s\n", word)
 		if testx, err := getSong(word); err == nil {
 			if testx == nil {
 				ctx.ReplyText("出错了，稍后尝试")
