@@ -116,11 +116,15 @@ func init() {
 			if testx == nil {
 				ctx.ReplyText("出错了，稍后尝试")
 			} else {
+			 for _, song := range result.Songs {
 				songurl := testx.Songs.ID
+				fmt.Printf("歌曲id = %d\n", songurl)
 				geurl := "https://music.163.com/song/media/outer/url?id="
 				geurl += strconv.Itoa(songurl)
 				geurl += ".mp3"
 				ctx.ReplyMusic(testx.Songs.Name, testx.Songs.Artists.Name, "网易云/wx8dd6ecd81906fd84", "http://music.163.com/song/media/outer/", geurl , testx.Songs.Album.PicUrl)
+				break
+			}
 				//ReplyMusic(name, author, app, jumpUrl, musicUrl, coverUrl string)
 			}
 		}
@@ -134,5 +138,6 @@ func getSong(keyword string)(*Result, error) {
 	if err := req.C().SetBaseURL(api).Get().Do().Into(&resp); err != nil {
 			return nil, err
 	}
+	fmt.Printf(resp)
 	return &resp, nil
 }
