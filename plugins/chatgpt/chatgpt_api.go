@@ -22,10 +22,10 @@ var (
 
 var (
 	ErrNoKey              = fmt.Errorf("请先私聊机器人配置apiKey\n指令：set chatgpt apikey __(多个key用;符号隔开)\napiKey获取请到https://beta.openai.com获取")
-	ErrMaxTokens          = errors.New("OpenAi免费上下文长度限制为4097个词组，您的上下文长度已超出限制")
-	ErrExceededQuota      = errors.New("OpenAi配额已用完，请联系管理员")
-	ErrIncorrectKey       = errors.New("OpenAi ApiKey错误，请联系管理员")
-	ErrServiceUnavailable = errors.New("ChatGPT服务异常，请稍后再试")
+	ErrMaxTokens          = errors.New("上下文长度限制为4097个词组，您的上下文长度已超出限制")
+	ErrExceededQuota      = errors.New("配额已用完，请联系管理员")
+	ErrIncorrectKey       = errors.New("ApiKey错误，请联系管理员")
+	ErrServiceUnavailable = errors.New("服务异常，请稍后再试")
 )
 
 // apikey缓存

@@ -250,6 +250,8 @@ type IFramework interface {
   * `import _ "github.com/miracle0609/wxbot/plugins/caimiyu"`
 * [x] [网易云随机歌曲-点击查看使用说明](plugins/wangyiyunRandSong)
   * `import _ "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"`
+* [x] [网易云点歌-点击查看使用说明](plugins/diange)
+* `import _ "github.com/miracle0609/wxbot/plugins/diange"`
 </details>
 
 ### 指令大全
@@ -316,7 +318,6 @@ docker run -d \
 
 ```yaml
 - "github.com/miracle0609/wxbot/plugins/baidubaike"   # 百度百科
-- "github.com/miracle0609/wxbot/plugins/chatgpt"      # GPT聊天
 - "github.com/miracle0609/wxbot/plugins/crazykfc"     # 肯德基疯狂星期四骚话
 - "github.com/miracle0609/wxbot/plugins/ghmonitor"    # 公众号消息监控转发
 - "github.com/miracle0609/wxbot/plugins/manager"      # 群组管理相关
@@ -331,6 +332,8 @@ docker run -d \
 - "github.com/miracle0609/wxbot/plugins/youdaofanyi"  # 有道翻译
 - "github.com/miracle0609/wxbot/plugins/caimiyu"  # 猜谜语
 - "github.com/miracle0609/wxbot/plugins/wangyiyunRandSong"  # 网易云随机歌曲
+- "github.com/miracle0609/wxbot/plugins/diange"  # 点歌
+- "github.com/miracle0609/wxbot/plugins/chatgpt"      # GPT聊天
 ```
 
 ### 参考案例

@@ -18,9 +18,9 @@ func setSingleCommand(ctx *robot.Ctx, msg string, command string) {
 		answer, err := AskChatGpt(ctx, messages, time.Second)
 		if err != nil {
 			if errors.Is(err, ErrNoKey) {
-				ctx.ReplyTextAndAt(err.Error())
+				ctx.ReplyTextAndAt("提问频率过快，请稍后再试")
 			} else {
-				ctx.ReplyTextAndAt("ChatGPT出错了，Err：" + err.Error())
+				ctx.ReplyTextAndAt("提问频率过快，请稍后再试")
 			}
 			return
 		}
