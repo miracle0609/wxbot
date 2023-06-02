@@ -21,11 +21,11 @@ var (
 )
 
 var (
-	ErrNoKey              = fmt.Errorf("请先私聊机器人配置apiKey\n指令：set chatgpt apikey __(多个key用;符号隔开)\napiKey获取请到https://beta.openai.com获取")
+	ErrNoKey              = fmt.Errorf("请先私聊机器人配置apiKey\n")
 	ErrMaxTokens          = errors.New("上下文长度限制为4097个词组，您的上下文长度已超出限制")
 	ErrExceededQuota      = errors.New("配额已用完，请联系管理员")
 	ErrIncorrectKey       = errors.New("ApiKey错误，请联系管理员")
-	ErrServiceUnavailable = errors.New("服务异常，请稍后再试")
+	ErrServiceUnavailable = errors.New("提问频率过快，请稍后再试")
 )
 
 // apikey缓存
@@ -164,6 +164,18 @@ func AskChatGpt(ctx *robot.Ctx, messages []openai.ChatCompletionMessage, delay .
 			return "", ErrIncorrectKey
 		}
 		if strings.Contains(err.Error(), "invalid character") {
+			return "", ErrServiceUnavailable
+		}
+		if strings.Contains(err.Error(), "ChatGPT出错了") {
+			return "", ErrServiceUnavailable
+		}
+		if strings.Contains(err.Error(), "A connection attempt failed") {
+			return "", ErrServiceUnavailable
+		}
+		if strings.Contains(err.Error(), "https://miracle0609.top/v1/chat/completions") {
+			return "", ErrServiceUnavailable
+		}
+		if strings.Contains(err.Error(), "miracle0609.top") {
 			return "", ErrServiceUnavailable
 		}
 		return "", err

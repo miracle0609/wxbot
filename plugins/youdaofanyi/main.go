@@ -18,7 +18,7 @@ func init() {
 			"* 有道翻译 [内容]\n",
 	})
 
-	engine.OnRegex(`(^有道翻译|^翻译) ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
+	engine.OnRegex(`(^有道翻译) ?(.*?)$`).SetBlock(true).Handle(func(ctx *robot.Ctx) {
 		word := ctx.State["regex_matched"].([]string)[2]
 		if data, err := getFanYi(word); err == nil {
 			if data == nil {

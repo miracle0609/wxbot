@@ -144,8 +144,8 @@ func init() {
 
 		// 正式处理
 		if c, ok := chatRoomCtx.Load(chatRoom.chatId); ok {
-			// 判断距离上次聊天是否超过10分钟了
-			if now.Sub(c.(ChatRoom).chatTime) > 10*time.Minute {
+			// 判断距离上次聊天是否超过5分钟了
+			if now.Sub(c.(ChatRoom).chatTime) > 5*time.Minute {
 				chatRoomCtx.LoadAndDelete(chatRoom.chatId)
 				chatRoom.content = []openai.ChatCompletionMessage{{Role: "user", Content: msg}}
 			} else {
@@ -161,10 +161,10 @@ func init() {
 			case errors.Is(err, ErrNoKey):
 				ctx.ReplyTextAndAt(err.Error())
 			case errors.Is(err, ErrMaxTokens):
-				ctx.ReplyTextAndAt("和你的聊天上下文内容太多啦，我的记忆好像在消退.. 糟糕，我忘记了..，请重新问我吧")
+				ctx.ReplyTextAndAt("和你的聊天内容太多啦，我的记忆好像在消退.. 糟糕，我忘记了..，请艾特我并发送清空会话四个字")
 				chatRoomCtx.LoadAndDelete(chatRoom.chatId)
 			default:
-				ctx.ReplyTextAndAt("ChatGPT出错了，Err：" + err.Error())
+				ctx.ReplyTextAndAt("提问频率过快，请稍后再试")
 			}
 			return
 		}
