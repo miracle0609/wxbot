@@ -21,3 +21,4 @@
 * [猜谜语](caimiyu)
 * [网易云随机歌曲](wangyiyunRandSong)
 * [网易云点歌](diange)
+* [末日血战游戏新魔窟专属功能](damoku)

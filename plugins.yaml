@@ -5,6 +5,7 @@
 - "github.com/miracle0609/wxbot/plugins/memepicture"      # 表情包原图
 - "github.com/miracle0609/wxbot/plugins/moyuban"          # 摸鱼办
 - "github.com/miracle0609/wxbot/plugins/pinyinsuoxie"     # 拼音缩写翻译
+- "github.com/miracle0609/wxbot/plugins/damoku"           # 打新魔窟自动回复功能
 - "github.com/miracle0609/wxbot/plugins/plmm"             # 漂亮妹妹
 - "github.com/miracle0609/wxbot/plugins/weather"          # 天气查询
 - "github.com/miracle0609/wxbot/plugins/zaobao"           # 每日早报
