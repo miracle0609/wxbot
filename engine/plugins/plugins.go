@@ -25,9 +25,6 @@ import (
 	// 拼音缩写翻译
 	_ "github.com/miracle0609/wxbot/plugins/pinyinsuoxie"
 
-	// 打新魔窟自动回复功能
-	_ "github.com/miracle0609/wxbot/plugins/damoku"
-
 	// 漂亮妹妹
 	_ "github.com/miracle0609/wxbot/plugins/plmm"
 
