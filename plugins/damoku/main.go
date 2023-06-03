@@ -1,12 +1,9 @@
 package damoku
 
 import (
-	"embed"
-	"errors"
 	"fmt"
 	"strings"
 	"bufio"
-	"github.com/imroc/req/v3"
 
 	"github.com/miracle0609/wxbot/engine/control"
 	"github.com/miracle0609/wxbot/engine/robot"
@@ -15,8 +12,8 @@ import (
 )
 
 //go:embed data
-var mokuData embed.FS
 
+var db sqlite.DB
 type Xinmoku struct {
 	Name    string    `gorm:"column:name;index"`    // 
 	Answer    string `gorm:"column:answer;index"`    // 
@@ -49,12 +46,12 @@ func init() {
 
 
 func initXinmoku() {
-	xinmokuFile, err := mokuData.ReadFile("data/xinmoku.txt")
+	xinmokuFile, err := os.Open("data/data.txt")
 	if err != nil {
-		log.Errorf("[Xinmoku] 获取魔窟答案失败, error:%s", err.Error())
-		return
+		log.Fatal(err)
 	}
 	defer xinmokuFile.Close()
+
 	// insert system moku answer
 	scanner := bufio.NewScanner(xinmokuFile)
 	for scanner.Scan() {
@@ -64,7 +61,7 @@ func initXinmoku() {
 			//_, err = db.Exec(sqlStmt, fields[0], fields[1])
 			_, err = db.Orm.Table("xinmoku").FirstOrCreate(&Xinmoku{Name: fields[0], Answer: fields[1]}, "name = ? and answer = ?", fields[0], fields[1])
 			if err != nil {
-				fmt.Sprintf("%q: %s\n", err, sqlStmt)
+				fmt.Sprintf("%q: %s\n", err, fields[0])
 			}
 		} else {
 			fmt.Sprintf("Invalid line: %s\n", scanner.Text())
