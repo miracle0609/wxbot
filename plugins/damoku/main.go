@@ -4,16 +4,19 @@ import (
 	"fmt"
 	"strings"
 	"bufio"
-
+	"os"
+	"database/sql"
 	"github.com/miracle0609/wxbot/engine/control"
 	"github.com/miracle0609/wxbot/engine/robot"
 	"github.com/miracle0609/wxbot/engine/pkg/log"
 	"github.com/miracle0609/wxbot/engine/pkg/sqlite"
+	"github.com/mattn/go-sqlite3"
 )
 
 //go:embed data
 
 var db sqlite.DB
+var err string
 type Xinmoku struct {
 	Name    string    `gorm:"column:name;index"`    // 
 	Answer    string `gorm:"column:answer;index"`    // 
@@ -26,11 +29,14 @@ func init() {
 			"* 打[毒瘤名字/毒瘤组合编号]\n" ,
 	})
 	
-	if err := sqlite.Open(engine.GetDataFolder()+"/moku.db", &db); err != nil {
+	if err := sql.Open("sqlite3", engine.GetDataFolder()+"/moku.db"); err != nil {
 		log.Fatalf("open sqlite db failed: %v", err)
 	}
-	if err := db.Create("xinmoku", &Xinmoku{}); err != nil {
-		log.Fatalf("create xinmoku table failed: %v", err)
+	sqlStmt := "CREATE TABLE IF NOT EXISTS xinmoku (name TEXT, answer TEXT);"
+	_, err = db.Exec(sqlStmt)
+	if err != nil {
+    fmt.Sprintf("%q: %s\n", err, sqlStmt)
+		return
 	}
 	// 导入新魔窟打法
 	initXinmoku()
@@ -57,9 +63,9 @@ func initXinmoku() {
 	for scanner.Scan() {
 		fields := strings.Split(scanner.Text(), ",")
 		if len(fields) == 2 {
-			//sqlStmt := "INSERT INTO xinmoku (name, answer) VALUES (?, ?)"
-			//_, err = db.Exec(sqlStmt, fields[0], fields[1])
-			_, err = db.Orm.Table("xinmoku").FirstOrCreate(&Xinmoku{Name: fields[0], Answer: fields[1]}, "name = ? and answer = ?", fields[0], fields[1])
+			sqlStmt := "INSERT INTO xinmoku (name, answer) VALUES (?, ?)"
+			_, err = db.Exec(sqlStmt, fields[0], fields[1])
+			//_, _, err = db.Orm.Table("xinmoku").FirstOrCreate(&Xinmoku{Name: fields[0], Answer: fields[1]}, "name = ? and answer = ?", fields[0], fields[1])
 			if err != nil {
 				fmt.Sprintf("%q: %s\n", err, fields[0])
 			}
