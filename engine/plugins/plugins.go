@@ -7,6 +7,9 @@ import (
 	// 百度百科
 	_ "github.com/miracle0609/wxbot/plugins/baidubaike"
 
+	// 打新魔窟
+	_ "github.com/miracle0609/wxbot/plugins/damoku"
+
 	// 肯德基疯狂星期四骚话
 	_ "github.com/miracle0609/wxbot/plugins/crazykfc"
 
